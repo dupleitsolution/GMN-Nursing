@@ -20,6 +20,7 @@ nav a {
 
 a.nav-link {
   color: #dc3545 !important;
+  font-size: 12px;
 }
 
 .banner {
