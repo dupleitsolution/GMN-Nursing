@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-danger p-2">
+        <div class="bg-danger p-2 header">
             <div class="row m-0 p-0 align-items-center">
                 <div class="col-12 col-lg-9 d-none d-lg-block">
                     <nav class="d-flex align-items-center gap-2 text-uppercase custom_size">
@@ -171,17 +171,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3 py-2">
-                    <img src="/assets/90ac73d8222c55100b799d47009919bb 1.png" alt="news" class="img-fluid"
-                        loading="lazy">
+                    <div class="position-relative newsBx">
+                        <img src="/assets/90ac73d8222c55100b799d47009919bb 1.png" alt="news" class="img-fluid"
+                            loading="lazy">
+                        <div class="custom_link">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 py-2">
-                    <img src="/assets/Rectangle 11.png" alt="news" class="img-fluid" loading="lazy">
+                <div class="col-12 col-md-6 col-lg-3 py-2 position-relative">
+                    <div class="position-relative newsBx">
+                        <img src="/assets/Rectangle 11.png" alt="news" class="img-fluid" loading="lazy">
+                        <div class="custom_link">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 py-2">
-                    <img src="/assets/Rectangle 11 (1).png" alt="news" class="img-fluid" loading="lazy">
+                <div class="col-12 col-md-6 col-lg-3 py-2 position-relative">
+                    <div class="position-relative newsBx">
+                        <img src="/assets/Rectangle 11 (1).png" alt="news" class="img-fluid" loading="lazy">
+                        <div class="custom_link">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 py-2">
-                    <img src="/assets/Rectangle 11 (2).png" alt="news" class="img-fluid" loading="lazy">
+                <div class="col-12 col-md-6 col-lg-3 py-2 position-relative">
+                    <div class="position-relative newsBx">
+                        <img src="/assets/Rectangle 11 (2).png" alt="news" class="img-fluid" loading="lazy">
+                        <div class="custom_link">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="text-center pt-5">
@@ -219,7 +239,7 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-6">
                             <h2 class="text-center text-uppercase text-danger">what our students says</h2>
-                            <div class="d-flex align-items-center pt-3 gap-2 flex-column">
+                            <div class="d-flex align-items-center pt-3 gap-2 flex-column flex-md-row">
                                 <img src="assets/Vector (1).png" alt="vector" loading="lazy">
                                 <p>What I like the most is the faculty at GMN
                                     College, they understand the difficulties I face being a student and give support at
@@ -236,7 +256,7 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-6">
                             <h2 class="text-center text-uppercase text-danger">what our students says</h2>
-                            <div class="d-flex align-items-center pt-3 gap-2 flex-column">
+                            <div class="d-flex align-items-center pt-3 gap-2 flex-column flex-md-row">
                                 <img src="assets/Vector (1).png" alt="vector" loading="lazy">
                                 <p>What I like the most is the faculty at GMN
                                     College, they understand the difficulties I face being a student and give support at
@@ -253,7 +273,7 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-6">
                             <h2 class="text-center text-uppercase text-danger">what our students says</h2>
-                            <div class="d-flex align-items-center pt-3 gap-2 flex-column">
+                            <div class="d-flex align-items-center pt-3 gap-2 flex-column flex-md-row">
                                 <img src="assets/Vector (1).png" alt="vector" loading="lazy">
                                 <p>What I like the most is the faculty at GMN
                                     College, they understand the difficulties I face being a student and give support at
@@ -282,10 +302,10 @@
     <div class="vision pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4 py-2">
+                <div class="col-12 col-md-4 py-2 px-0">
                     <img src="/assets/Mask group (11).png" alt="vision" class="img-fluid" loading="lazy">
                 </div>
-                <div class="col-12 col-md-8 py-2">
+                <div class="col-12 col-md-8 py-2 px-0">
 
                     <ul class="nav nav-pills" id="myTab" role="tablist">
                         <li class="nav-item">
@@ -593,6 +613,14 @@
                 $(".navigation").toggle();
             });
             $('#exampleModal').modal('show');
+        });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 75) {
+                $('.header').addClass("sticky");
+            }
+            else {
+                $('.header').removeClass("sticky");
+            }
         });
     </script>
 
