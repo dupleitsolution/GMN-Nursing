@@ -1,3 +1,7 @@
+* {
+  transition: 0.5s;
+}
+
 header {
   font-family: monospace !important;
 }
@@ -59,28 +63,19 @@ a.nav-link {
   height: 125px;
 }
 
-.yoga {
-  background-image: url("/assets/Mask\ group\ \(4\).png");
-  background-size: cover;
-  display: flex;
-  height: 496px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.custom_img {
+.custom_img4 {
   width: 100%;
   height: 490px;
   object-fit: cover;
 }
 
-.yoga::after {
-  position: absolute;
-  content: "";
+.custom_size {
+  font-size: 14.5px;
+}
+.custom_img {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  height: 490px;
+  object-fit: cover;
 }
 
 .yoga .content {
@@ -123,4 +118,37 @@ footer::after {
   height: 20px;
   background: #e3000f;
   bottom: 0;
+}
+
+/*......Responsiveness.....*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .banner {
+    height: 250px;
+  }
+
+  .custom_img {
+    height: 320px;
+  }
+
+  .custom_img4 {
+    height: 637px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
