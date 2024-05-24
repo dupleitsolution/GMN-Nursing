@@ -39,6 +39,10 @@ a.nav-link {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 .sticky {
   position: fixed;
   top: 0;
