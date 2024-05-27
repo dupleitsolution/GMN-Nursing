@@ -173,6 +173,10 @@ footer::after {
   .custom_img4 {
     height: 637px;
   }
+  .nav {
+    display: block !important;
+    text-align: center;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
