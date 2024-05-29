@@ -206,6 +206,27 @@ footer::after {
   bottom: 0;
 }
 
+.hostel_form {
+  background-color: #fff2cc;
+}
+
+.box {
+  background-color: #fff;
+  border: 2px solid #000;
+  height: 50px;
+  width: 300px;
+}
+
+.custom_control {
+  background-color: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 2px solid #000;
+  outline: none;
+  width: 100%;
+}
+
 /*......Responsiveness.....*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -224,6 +245,13 @@ footer::after {
   .nav {
     display: block !important;
     text-align: center;
+  }
+  .custom_size div {
+    padding-bottom: 10px;
+  }
+
+  .dropdown-item {
+    font-size: 0.8rem;
   }
 }
 
