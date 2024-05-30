@@ -206,7 +206,7 @@ footer::after {
   bottom: 0;
 }
 
-.hostel_form {
+.custom_form {
   background-color: #fff2cc;
 }
 
@@ -225,6 +225,14 @@ footer::after {
   border-bottom: 2px solid #000;
   outline: none;
   width: 100%;
+}
+.custom_control2 {
+  border-right: transparent;
+  border-left: transparent;
+  border-top: transparent;
+  background-color: transparent;
+  border-bottom: 2px solid #000;
+  outline: none;
 }
 
 /*......Responsiveness.....*/
@@ -252,6 +260,11 @@ footer::after {
 
   .dropdown-item {
     font-size: 0.8rem;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    position: relative;
+    left: 0;
   }
 }
 
