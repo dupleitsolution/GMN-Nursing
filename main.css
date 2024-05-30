@@ -188,25 +188,35 @@ footer {
   color: #01719b;
 }
 
-footer::before {
-  content: "";
-  position: absolute;
+.line_design1 {
+  background-color: #e3000f;
   width: 50%;
-  height: 20px;
-  background: #e3000f;
-  right: 0;
-}
-
-footer::after {
   content: "";
-  position: absolute;
-  width: 50%;
-  height: 20px;
-  background: #e3000f;
+  height: 30px;
   bottom: 0;
 }
 
-.custom_form {
+.line_design2 {
+  background-color: #e3000f;
+  width: 50%;
+  content: "";
+  height: 30px;
+  right: 0;
+}
+
+.custom_tab {
+  box-shadow: 2px 2px 5px -2px #000;
+}
+
+.lh {
+  line-height: 28px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.bg-theme {
   background-color: #fff2cc;
 }
 
