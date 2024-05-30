@@ -122,7 +122,8 @@ a:hover {
 
 .dropdown-submenu > .dropdown-menu {
   top: 0;
-  left: 100%;
+  left: 0;
+  position: relative;
   margin-top: -6px;
   margin-left: -1px;
   -webkit-border-radius: 0 6px 6px 6px;
@@ -260,6 +261,7 @@ footer {
   .custom_img4 {
     height: 637px;
   }
+
   .nav {
     display: block !important;
     text-align: center;
