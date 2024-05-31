@@ -6,8 +6,24 @@
   color: #fff !important;
 }
 
+.bg-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  padding: 10px 5px;
+  background-color: #e3010f;
+}
+
+.bg-custom p small {
+  opacity: 0.9;
+}
+.bg-custom p small a:hover {
+  font-weight: 600;
+}
+
 .header ul li .dropdown-menu a:hover {
-  text-decoration: underline !important;
   background-color: transparent !important;
 }
 
@@ -23,11 +39,21 @@
 .header ul li a {
   font-family: monospace !important;
   color: #fff !important;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 15px;
 }
 
 .header ul li .dropdown-menu a {
   font-family: sans-serif !important;
   color: #fff !important;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.header ul li .dropdown-menu a:hover {
+  opacity: 1;
 }
 
 .gap-px {
@@ -71,13 +97,17 @@ nav a {
 }
 
 .dropdown-submenu > .dropdown-menu {
-  top: 38px;
-  left: 0;
+  top: 18px;
+  left: 100%;
   margin-top: -6px;
   margin-left: -1px;
   -webkit-border-radius: 0 6px 6px 6px;
   -moz-border-radius: 0 6px 6px;
   border-radius: 0 6px 6px 6px;
+}
+
+.gap-15 {
+  gap: 15px;
 }
 
 .dropdown-submenu:hover > .dropdown-menu {
@@ -138,13 +168,41 @@ a:hover {
 .banner {
   width: 100%;
   height: 400px;
-  background-image: url("./assets/Mask\ group\ \(3\).png");
+  background-image: url("/assets/Mask\ group\ \(3\).png");
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.external_banner {
+  width: 100%;
+  height: 260px;
+  background-image: url("/assets/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.external_banner:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+.overlay_text {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .banner .rectangle {
@@ -210,6 +268,12 @@ a:hover {
 footer {
   background: #000;
   position: relative;
+  font-size: 12px;
+}
+
+footer h5,
+footer h6 {
+  font-size: 14px;
 }
 
 .text-blue {
@@ -245,7 +309,7 @@ footer {
 }
 
 .bg-theme {
-  background-color: #fff2cc;
+  background-color: #e3000f;
 }
 
 .box {
@@ -321,6 +385,9 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .dropdown-submenu > .dropdown-menu {
+    left: 55%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
