@@ -29,6 +29,8 @@
 
 .header ul li .dropdown-menu {
   background-color: #333 !important;
+  top: 94%;
+  border: transparent;
 }
 
 .dropdown-toggle::after {
@@ -110,6 +112,11 @@ nav a {
 
 .dropdown-submenu {
   position: relative;
+}
+
+.social_links .fa {
+  font-size: 20px;
+  color: #fff;
 }
 
 .dropdown-submenu > .dropdown-menu {
