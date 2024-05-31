@@ -48,8 +48,9 @@
   font-size: 15px;
 }
 
-.dropdown-menu {
+header ul li ul.dropdown-menu {
   top: 94% !important;
+  left: -96px !important;
   border: none !important;
   border-radius: 0px !important;
 }
@@ -347,6 +348,10 @@ footer h6 {
   outline: none;
   width: 100%;
 }
+
+.navbar {
+  padding: 0px !important;
+}
 .custom_control2 {
   border-right: transparent;
   border-left: transparent;
@@ -370,6 +375,7 @@ footer h6 {
 
   .custom_img4 {
     height: 637px;
+    user-select: none;
   }
 
   .nav {
