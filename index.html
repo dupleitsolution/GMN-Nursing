@@ -166,6 +166,12 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -629,16 +635,10 @@
     </section>
 
 
-    <footer class="mt-5 position-relative">
-        <div class="position-absolute line_design1">
-
-        </div>
-        <div class="position-absolute line_design2">
-
-        </div>
-        <div class="row py-5 m-0 px-2">
+    <footer class="position-relative">
+        <div class="row py-3 m-0 px-2">
             <div class="col-12 col-lg-4 py-2">
-                <div class="d-flex gap-2 align-items-center">
+                <div class="d-flex gap-px align-items-center">
                     <div class="logo">
                         <img src="/assets/logo6.png" width="80" alt="logo" loading="lazy">
                     </div>
@@ -649,17 +649,30 @@
                         </h6>
                     </div>
                 </div>
-                <p class="text-white py-4">Gandhi Memorial National (G.M.N) College, Ambala Cantt was founded after the
+                <p class="text-white py-3 m-0">Gandhi Memorial National (G.M.N) College, Ambala Cantt was founded after
+                    the
                     partition of the country
-                    in 1948 by a great visionary, philanthro... <a href="#" class="text-danger">Read More</a></p>
+                    in 1948 by a great visionary, philanthro... <a href="introduction.html" class="text-danger">Read
+                        More</a></p>
                 <img src="/assets/nacLogo 1.svg" alt="nac" width="90" loading="lazy">
             </div>
-            <div class="col-12 col-lg-2 py-2">
-                <h5 class="text-capitalize text-white font-weight-normal pt-3"><u>related links</u></h5>
-                <p class="text-white pt-4"><a href="#" class="text-white">About Us</a></p>
-                <p class="text-white"><a href="#" class="text-white">Gallery</a></p>
+            <div class="col-12 col-lg-2 py-1">
+                <h5 class="text-capitalize text-white font-weight-normal pt-3 text-center"><u>related links</u></h5>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-white pt-4"><a href="#" class="text-white">Home</a></p>
+                        <p class="text-white"><a href="#" class="text-white">About Us</a></p>
+                        <p class="text-white"><a href="#" class="text-white">Gallery</a></p>
+                        <p class="text-white"><a href="#" class="text-white">Faculty</a></p>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-white pt-4"><a href="#" class="text-white">Courses</a></p>
+                        <p class="text-white"><a href="#" class="text-white">Why GMN</a></p>
+                        <p class="text-white"><a href="#" class="text-white">Life@GMN</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 py-1">
                 <h5 class="text-capitalize text-white font-weight-normal pt-3"><u>important links</u></h5>
                 <p class="text-white pt-4"><a href="#" class="text-white">INC, New Delhi</a></p>
                 <p class="text-white"><a href="#" class="text-white">HN & NMC, Panchkula</a></p>
@@ -667,25 +680,28 @@
                 <p class="text-white">Department Of Higher
                     Education</p>
             </div>
-            <div class="col-12 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 py-1">
                 <h5 class="text-capitalize text-white font-weight-normal pt-3"><u>contact details</u></h5>
                 <p class="text-white d-flex gap-px pt-3 align-items-center">
-                    <img src="/assets/phone.svg" alt="phone" loading="lazy">
+                    <img src="/assets/phone.svg" alt="phone" width="15" loading="lazy">
                     <span><a href="tel:0171-2640321" class="text-white">0171-2640321</a></span>
                 </p>
-                <p class="text-white d-flex gap-px pt-3 align-items-center">
-                    <img src="/assets/clarity--email-solid 1.svg" alt="phone" loading="lazy">
+                <p class="text-white d-flex gap-px align-items-center">
+                    <img src="/assets/clarity--email-solid 1.svg" width="20" alt="phone" loading="lazy">
                     <span><a href="mailto:gmncollege@gmail.com" class="text-white">gmncollege@gmail.com</a></span>
                 </p>
-                <img src="/assets/Mask group (12).png" class="img-fluid" alt="map" loading="lazy">
+                <img src="/assets/Mask group (12).png" class="img-fluid" width="200" alt="map" loading="lazy">
             </div>
-            <div class="col-12 pt-3 py-2">
-                <div class="d-flex align-items-center justify-content-between gap-px">
-                    <img src="/assets/3.svg" alt="facebook" loading="lazy">
-                    <p class="text-white">Copyright © Gandhi Memorial National College (GMN College) Ambala. All Rights
-                        Reserved</p>
+            <div class="col-12 py-1 social_links">
+                <div class="d-flex align-items-center justify-content">
+                    <a href="#"><img src="/assets/facebook (1).png" class="img-fluid" width="40" alt="facebook"></a>
                 </div>
             </div>
+        </div>
+        <div class="bg-theme p-2">
+            <p class="text-white m-0 text-center">Copyright © Gandhi Memorial National College (GMN College) Ambala. All
+                Rights
+                Reserved</p>
         </div>
     </footer>
 
@@ -780,13 +796,13 @@
         crossorigin="anonymous"></script>
 
     <script>
-        // $(document).ready(function () {
-        //     $("#menu").click(function () {
-        //         $(".navigation").toggle();
-        //     });
-        //     $('#exampleModal').modal('show');
+        $(document).ready(function () {
+            $("#menu").click(function () {
+                $(".navigation").toggle();
+            });
+            $('#exampleModal').modal('show');
 
-        // });
+        });
         $(window).scroll(function () {
             if ($(this).scrollTop() > 75) {
                 $('.header').addClass("sticky");
