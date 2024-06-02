@@ -261,138 +261,426 @@
         </header>
     </div>
 
+
+
     <div class="external_banner">
-        <h2 class="overlay_text">Governing body</h2>
+        <h2 class="overlay_text">Admission Form</h2>
     </div>
 
     <section class="p-4">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="d-flex justify-content-between">
-                        <ul class="pl-3">
-                            <li>
-                                Dr. Gurdev Singh
-                            </li>
-                        </ul>
-                        <p>President</p>
+            <div class="text-center">
+                <img src="/assets/logo6.png" width="200" alt="logo">
+                <h5 class="text-danger pt-1">GANDHI MEMORIAL NATIONAL, COLLEGE OF NURSING AMBALA CANTT (HR)
+                </h5>
+                <h5 class="text-primary">Affiliated by</h5>
+                <h5 class="text-success pb-1">
+                    Govt. Haryana (DMER. Panchkula)<br>
+                    Pt. B. D. Sharma University of Health Sciences, Rohtak<br>
+                    Haryana Nurses & Nurse Midwives Council, Panchkula</br.>
+                    Indian Nursing Council, New Delhi
+                </h5>
+            </div>
+
+            <form>
+                <div class="row justify-content-between pt-3">
+                    <div class="col-12 col-md-4">
+                        <h5>Instructions</h5>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h5>Session:</h5>
+                        <input type="text" class="custom_control">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="d-flex justify-content-between">
-                        <ul class="pl-3">
-                            <li>
-                                Sh. K.J.S. Balhaya
-                            </li>
-                        </ul>
-                        <p>Vice President</p>
+                <ul style="list-style: decimal;">
+                    <li>
+                        Fill The Form Neatly & Legibly in English with Your own Writing
+                    </li>
+                    <li>Incomplete form will not be entertained.</li>
+                    <li>Candidates should read the rule & Regulation before signing the application </li>
+                </ul>
+                <div class="row">
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fname">Father's Name</label>
+                            <input type="text" class="form-control" id="fname">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex justify-content-md-center">
+                            <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                    <div id="imagePreview" style="background-image: url(/assets/1\ \(2\).png);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="mname">Mother's Name</label>
+                            <input type="text" class="form-control" id="mname">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="mname" class="d-block">Category</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">GEN</label>
+                            </div>
+                            <div class="pl-3 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">SC</label>
+                            </div>
+                            <div class="pl-3 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio3">BC</label>
+                            </div>
+                            <div class="pl-3 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio4">OBC</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <input type="text" class="form-control" id="gender">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="dob">Dob</label>
+                            <input type="text" class="form-control" id="dob">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="nationality">Nationality</label>
+                            <input type="text" class="form-control" id="nationality">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="nationality">Nationality</label>
+                            <input type="text" class="form-control" id="nationality">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Address">Permanent Address</label>
+                            <textarea class="form-control" id="Address" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Corresponds">Corresponds Address</label>
+                            <textarea class="form-control" id="Corresponds" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="pin">Pin Code</label>
+                            <input type="text" class="form-control" id="pin">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="email">Email ID</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="col-12 py-2">
+                        <div class="form-group m-0">
+                            <label for="">Contact No</label>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="students">Students</label>
+                                        <input type="text" class="form-control" id="students">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="p">P</label>
+                                        <input type="text" class="form-control" id="p">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Aadhaar">Aadhaar Card no </label>
+                            <input type="text" class="form-control" id="Aadhaar">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Family">Family ID</label>
+                            <input type="text" class="form-control" id="Family">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="Qualification">Qualification</label>
+                            <input type="text" class="form-control" id="Qualification">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="d-flex justify-content-between">
-                        <ul class="pl-3">
-                            <li>
-                                Sh. Ajay Aggarwal
-                            </li>
-                        </ul>
-                        <p>General Secretary</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">S No.</th>
+                                <th scope="col">Exam Passed</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Name of Board/University</th>
+                                <th scope="col">Max Marks</th>
+                                <th scope="col">Obtained Marks</th>
+                                <th scope="col">% Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                                <td><input type="text" class="w-100"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="font-weight-bold">Undertaking and pledge by the candidate:</p>
+                <ul>
+                    <li>
+                        I hereby certify that the entries made by me in this form are correct to the best of my
+                        knowledge belief and I have not concealed any information in any manner.
+                    </li>
+                    <li>
+                        I agree to observe and abide by all the rules and regulations of the institution in which I may
+                        be admitted, including those with regard to programme of studies, syllabus, scheme of
+                        examinations, examination rules and the hostel rules that may be laid from time to time by Pt.
+                        B. D. Sharma University of Health Sciences, Rohtak or institution during the period of my
+                        studies and I will not associate myself with any activity prejudicial to the discipline of
+                        institution.
+                    </li>
+                    <li>
+                        I fully understand that for any violation or infringement of these rules and regulations,
+                        disciplinary action can be taken against me by the authorities which may include cancellation of
+                        the candidature’s I certify that I am not involved in any illegal activity and no criminal case
+                        is pending against me in any court of law.
+                    </li>
+                    <li>
+                        I understand that if at any stage, it is found that I have provided any wrong information to
+                        seek admission, my admission shall stand cancelled automatically and I shall have no claim
+                        whatsoever, on the seat or the dues paid to the institution.
+                    </li>
+                </ul>
+                <p class="font-weight-bold">I certify that I have not passed the qualifying examination from more than
+                    one Board/University/another examining body.</p>
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md-4 py-2">
+                        <p class="font-weight-bold">Male Candidate shall affix their
+                            Left Thumb Impression</p>
+                    </div>
+                    <div class="col-12 col-md-4 py-2">
+                        <div class="bg-white thumb p-5 border border-dark">
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 py-2">
+                        <div class="form-group">
+                            <label for="sign">Full Sign of candidate:</label>
+                            <input type="text" class="custom_control" id="sign" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="dat2">Date:</label>
+                            <input type="text" class="custom_control" id="dat2" placeholder="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="d-flex justify-content-between">
-                        <ul class="pl-3">
-                            <li>
-                                Sh. Alok Gupta
-                            </li>
-                        </ul>
-                        <p>Treasurer</p>
+                <div class="row">
+                    <div class="col-12 col-md-4 py-2">
+                        <p class="font-weight-bold">Female Candidate Shall affix their
+                            Right Thumb Impression</p>
+                    </div>
+                    <div class="col-12 col-md-4 py-2">
+                        <div class="bg-white thumb p-5 border border-dark">
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="bg-primary text-white p-3 border border-dark mb-3">
-                        <h5 class="m-0">From the Desk of President </h5>
-                    </div>
+                <p class="font-weight-bold"></p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Check List / Enclosers (Attach Original Copies only):
+                                    Note: Tick relevant Box empty if not applicable</th>
+                                <th scope="col">Candidate</th>
+                                <th scope="col">Office</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Matric">
+                                        Matric Certificate
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Matric"></td>
+                                <td class="text-center"><input type="checkbox" id="Matric"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="plustwo">
+                                        10+2 Certificate
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="plustwo"></td>
+                                <td class="text-center"><input type="checkbox" id="plustwo"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Diploma">
+                                        Diploma / Degree
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Diploma"></td>
+                                <td class="text-center"><input type="checkbox" id="Diploma"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Haryana">
+                                        Haryana Residence
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Haryana"></td>
+                                <td class="text-center"><input type="checkbox" id="Haryana"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Family">
+                                        Family ID
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Family"></td>
+                                <td class="text-center"><input type="checkbox" id="Family"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Category">
+                                        Category Certificate
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Category"></td>
+                                <td class="text-center"><input type="checkbox" id="Category"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Migration">
+                                        Migration Certificate
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Migration"></td>
+                                <td class="text-center"><input type="checkbox" id="Migration"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Affidavit">
+                                        Gap Year Affidavit
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Affidavit"></td>
+                                <td class="text-center"><input type="checkbox" id="Affidavit"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Migration">
+                                        Migration Certificate
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Migration"></td>
+                                <td class="text-center"><input type="checkbox" id="Migration"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Aadhaar">
+                                        Aadhaar Card Copy
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Aadhaar"></td>
+                                <td class="text-center"><input type="checkbox" id="Aadhaar"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label" for="Photos">
+                                        Passport Size Photos (6)
+                                    </label>
+                                </td>
+                                <td class="text-center"><input type="checkbox" id="Photos"></td>
+                                <td class="text-center"><input type="checkbox" id="Photos"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="/assets/home2.jpg" alt="img" class="img-fluid">
-                <div class="pl-3">
-                    <p>I feel pleasure in extending you a very warm welcome on behalf of the Board of Governors as well
-                        as the whole Gandhi Memorial National College family to the new aspirants seeking admission in
-                        this institute, for structuring their career in Nursing. We have clearly laid down our vision,
-                        mission and values and efforts shall be made to utilize the infrastructural facilities and
-                        intellectual capital to achieve these goals and values. It shall be our endeavour to prepare
-                        nurses with a sound educational programme so that they may serve the institutions, patients with
-                        extra care and meet the basic health needs of the community.</p>
-                    <p>We are conscious of the changing needs of society; hence, we shall emphasize on imparting
-                        education
-                        and training to the students beyond the prescribed syllabus to make them good human beings &
-                        professionals also. The curriculum will be flexible enough to keep pace with changes that take
-                        place
-                        from time to time in the field of nursing and patient care.</p>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-danger">Apply Now</button>
                 </div>
-            </div>
-            <p class="pt-3">We live and work together as a family unit and hope that your stay with us will be more
-                comfortable,
-                fruitful and memorable.</p>
-            <h6>Dr. Gurdev Singh</h6>
-            <h6>President</h6>
-            <h6>G.M.N. COLLEGE TRUST & MANAGEMENT SOCIETY (Regd.)</h6>
-            <h6>AMBALA CANTT HARYANA</h6>
-            <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="bg-primary text-white p-3 border border-dark mb-3">
-                        <h5 class="m-0">Principal Message</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="/assets/home3.jpg" alt="img" class="custom_img20">
-                <div class="pl-3">
-                    <h5 class="text-secondary"><i>“Education is the most powerful weapon which you can use to change the
-                            world.”</i></h5>
-                    <p>Dear Parents, students and well-wishers of the family- my prayerful greetings to all of you.
-                        First and foremost, I would like to express my deep sentiments of gratitude to every one of you
-                        for your constant support, love and concern towards the college which enables and encourages us
-                        to strive hard to carry forward the mission of spreading value-based knowledge to one and all.
-                    </p>
-                    <p>Our students graduate with the skills, mind sets and qualities that will best equip them for
-                        success Come on let’s give our best and make this institution a modern temple of learning
-                        through our diligence, devotion and dedication. Wishing you all the best in the world of the
-                        future. They are the future leaders and role models of society.</p>
-                </div>
-            </div>
-            <p class="pt-3">Education is not an act of acquiring knowledge but learning a skill to lead life and forming
-                one’s personality. This is an ennobling process of growth. I can boldly say that we have excelled in
-                every initiative that we undertook and we have stood together in facing the challenges in realizing
-                quality education. We focus on discovering, developing and drawing out the hidden talents and the magic
-                lying dormant inside all of its students. From academics to co-curricular activities, perseverance and a
-                never-say-die spirit are entrenched in the heart of every student not only making them good students but
-                brilliant human beings. In today’s dynamic world, a 360-degree development and grooming is of supreme
-                importance and through our campus we are creating an environment for future leaders, entrepreneurs and
-                professional who possess skills and aptitudes in an array of functional disciplines.</p>
-            <p>We are partners in learning with our students and seek to deepen their knowledge, provide enriching and
-                innovative learning experiences, while also gently urging our students to come out of their comfort zone
-                to attempt new challenges.</p>
-            <p>Our college cares for the individual development of each and every student. We follow “mentor system”
-                under which each class is put into the multi-pronged web of a teacher. We accord prime importance to the
-                behavioural discipline, moral integrity and cognitive developments of our students.</p>
-            <p>I wish the best of fortune, peace and prosperity to all those who contribute to the noble task of
-                spreading education and its manifest qualities, aims and objectives.</p>
-            <h6>Prof. Ramlakhan Mali </h6>
-            <h6>PhD* (N), M.Sc. (N), B.Sc. (N)</h6>
-            <h6>Principal – Cum Professor</h6>
+            </form>
         </div>
     </section>
+
+
 
 
 
@@ -473,84 +761,6 @@
 
 
 
-
-
-    <!--modal-->
-    <div class=" modal show" tabindex="-1" role="dialog" id="exampleModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <img src="/assets/logo.svg" width="50" alt="logo">
-                        <h4 class="text-capitalize pt-1">admission form</h4>
-                    </div>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="email" placeholder="Email Address">
-                        </div>
-
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">+91</div>
-                            </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup"
-                                placeholder="Phone Number">
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-12 col-md-6 py-2">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Select State*</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 py-2">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Select City</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 py-2">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Course</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 py-2">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Specialization</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-12 py-2">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                            I agree to receive information regarding my submitted application by signing
-                                            up on
-                                            Gandhi Memorial National College.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-danger">Apply Now</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -584,6 +794,19 @@
             $('.dropdown').hover(function () {
                 $('.dropdown-toggle', this).trigger('click');
             });
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function () {
+            readURL(this);
         });
     </script>
 
