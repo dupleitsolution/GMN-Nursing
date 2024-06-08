@@ -19,6 +19,101 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+        <style>
+            .card-custom {
+                display: flex;
+                border-radius: 80px 50px 10px 50px;
+                margin-bottom: 20px;
+                margin-left: px;
+                padding: 0px;
+                color: white;
+                position: relative;
+            }
+            .card-header-custom {
+                display: flex;
+                align-items: center;
+            }
+            .card-header-custom img {
+                border-radius: 50%;
+                width: 160px;
+                height: 160px;
+                margin-right: 12px;
+                border: 5px solid rgba(0, 0, 0, 0.2);
+                position: relative;
+                margin-left: -36px;
+            }
+            .card-body-custom {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .contact-info {
+                margin: 0;
+            }
+            .contact-info i {
+                margin-right: 8px;
+            }
+            .bg-dark-teal { background-color: #003366; }
+            .bg-yellow { background-color: #FFD700; }
+            .bg-light-blue { background-color: #5F9EA0; }
+            .bg-red { background-color: #FF6347; }
+            .gvr-usr-text a {
+                color: white;
+                text-decoration: none;
+            }
+            .gvr-usr-text a:hover {
+                text-decoration: underline;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                .governingbdytxt .col-md-6 {
+                    color: #fff;
+                    width: 93%;
+                }
+            }
+        
+            /* Media Query for small devices */
+            @media (min-width: 320px) and (max-width: 550px) {
+                .card-custom {
+                    margin: 0px;
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 10px;
+        height: auto;
+        border-radius: 0;
+        margin-top: 16px;
+                }
+                .card-header-custom img {
+                    border-radius: 50%;
+                    width: 160px;
+                    height: 160px;
+                    margin-right: 12px;
+                    border: 5px solid rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    margin-left: 0px;
+                }
+                .governingbdytxt .col-md-6 {
+                    margin: 0px;
+                    width: 100%;
+                    margin-bottom: 25px;
+                    padding: 10px;
+                    height: auto;
+                    border-radius: 0;
+                    margin-top: 16px;
+                }
+                .card-header-custom {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .gvr-usr-text {
+                text-align: center;
+            }
+            }
+        </style>
+        
+
 </head>
 
 <body>
@@ -326,153 +421,340 @@
         <h2 class="overlay_text">Governing body</h2>
     </div>
 
-    <section class="p-4">
-        <div class="container">
-            <div class="p-3 border border-dark rounded">
+    <section class="p-2">
+        <div class="container" style="width: 100%;">
+            
+            <div class="p-3  border border-gray rounded" >
+               
+                  
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. Jaswant Jain
-                                </li>
-                            </ul>
-                            <p>Chairman</p>
+
+                    <div class="col-md-6 ">
+                        <div class="card card-custom bg-dark-teal m-4">
+                            <div class="card-header-custom">
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/637f27ef10c4f0c341dda89d787bf20f.jpg" alt="Dr. Gurdev Singh">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. Gurdev Singh</h3>
+                                    <p>President</p>
+                                    <address class="address"><i class="fas fa-globe"></i> 70A, Gobind Nagar, Ambala Cantt</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:9416076870">9416076870</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Dr. Gurdev Singh
-                                </li>
-                            </ul>
-                            <p>President</p>
+                   
+                    <div class="col-md-6 ">
+                        <div class="card card-custom m-4" style="background-color: #FFBB00;">
+                            <div class="card-header-custom">
+                                <img src="" alt="Sh. Jaswant Jain">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Jaswant Jain</h3>
+                                    <p>Chairman</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                
+               
+                
+
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. K.J.S. Balhaya
-                                </li>
-                            </ul>
-                            <p>Vice President</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #90AFC5;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/934ec3f29f400ae71081af452d039050.JPG" alt="Sh. K.J.S. Balhaya">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. K.J.S. Balhaya</h3>
+                                    <p>Vice President</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #FB6542;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/767af7bf73549e1bc289d894dd31fd5f.JPG" alt="Sh. Ajay Aggarwal">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Ajay Aggarwal</h3>
+                                    <p>General Secretary</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+               
+                
+
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. Ajay Aggarwal
-                                </li>
-                            </ul>
-                            <p>General Secretary</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #336B87;">
+                            <div class="card-header-custom" >
+                                <img src="path/to/image1.jpg" alt="Sh. C S Sethi">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. C S Sethi</h3>
+                                    <p>Joint Secretary</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #2A3132;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/9d7cc5648f294bfc2ed02233beaa654f.JPG" alt="Sh. Alok Gupta">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Alok Gupta</h3>
+                                    <p>Treasurer</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+              
+
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. C S Sethi
-                                </li>
-                            </ul>
-                            <p>Joint Secretary</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #80BD9E;">
+                            <div class="card-header-custom"  >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/4e8e681abb408de5377e7c22b0fe63b8.jpg" alt="Dr. Rohit Dutt">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. Rohit Dutt</h3>
+                                    <p>Advisor</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #89DA59;">
+                            <div class="card-header-custom"  >
+                                <img src="path/to/image1.jpg" alt="Prof. Ramlakhan Mali">
+                                <div class="gvr-usr-text">
+                                    <h3>Prof. Ramlakhan Mali</h3>
+                                    <p>Principal-cum-Ex-Officio Member Secy.</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+               
+                
+                
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. Alok Gupta
-                                </li>
-                            </ul>
-                            <p>Treasurer</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #505160;">
+                            <div class="card-header-custom"  >
+                                <img src="path/to/image.jpg" alt="Dr. DS Mathur">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. DS Mathur</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4"   style="background-color: #68829E;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/8c70a6c067f9a9fc6dd2f31a2c3b1719.JPG" alt="Dr. Subhash Dhamija">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. Subhash Dhamija</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+               
+
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Dr. Rohit Dutt
-                                </li>
-                            </ul>
-                            <p>Advisor</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #598237;">
+                            <div class="card-header-custom"  >
+                                <img src="path/to/image.jpg" alt="Sh. Har Prakash">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Har Prakash</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #3CB44B;" >
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/d88e93b68374a312fb34c0d17b33667a.jpg" alt="Dr. Rahul Trehan">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. Rahul Trehan</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+               
+                
+
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Prof. Ramlakhan Mali
-                                </li>
-                            </ul>
-                            <p>Principal-cum-Ex-Officio
-                                Member Secy.</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #42D4F4;">
+                            <div class="card-header-custom"   >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/e4c31b88d18d765dca14377e7fcd5c00.JPG" alt="Ms. Anuradha Bakshi">
+                                <div class="gvr-usr-text">
+                                    <h3>Ms. Anuradha Bakshi</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #4363D8;">
+                            <div class="card-header-custom"  >
+                                <img src="path/to/image.jpg" alt="Sh. Piyam Saggar Sharma">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Piyam Saggar Sharma</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+
+              
+                
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Dr. DS Mathur
-                                </li>
-                            </ul>
-                            <p>Executive Member</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #E6194B;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/e22e596523a6bb481d1447f85520f043.JPG" alt="Sh. Dev Sagar Mathur">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Dev Sagar Mathur</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #800000;">
+                            <div class="card-header-custom"  >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/921ff3f2c2368dfcf48c3f8400918a5c.JPG" alt="Sh. Daljeep Kumar Mittal">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Daljeep Kumar Mittal</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+              
+                
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Dr. Subhash Dhamija
-                                </li>
-                            </ul>
-                            <p>Executive Member</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #9A6324;">
+                            <div class="card-header-custom"  >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/82cec9c9ee6c9e9064dfe7d304bef37b.png" alt="Dr. Har Prakash Sharma">
+                                <div class="gvr-usr-text">
+                                    <h3>Dr. Har Prakash Sharma</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #000075;">
+                            <div class="card-header-custom"  >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/baa028d1a2bc2866c7ff945a8dc9f03b.JPG" alt="Sh. Harjumeet Singh">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Harjumeet Singh</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+               
+                
                 <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Sh. Har Prakash
-                                </li>
-                            </ul>
-                            <p>Executive Member</p>
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4" style="background-color: #375E97;">
+                            <div class="card-header-custom"  >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/84fa47ee8bedb64546fc5a1ad25bc88a.JPG" alt="Sh. Pradeep Kumar Jain">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Pradeep Kumar Jain</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card card-custom bg-dark-teal m-4"  style="background-color: #07575B;">
+                            <div class="card-header-custom" >
+                                <img src="https://www.gmncollegeambala.ac.in/images/uploads/governing/a9aa27b6be08e5b0659b27a677bb4751.jpg" alt="Sh. Bhupinder Singh">
+                                <div class="gvr-usr-text">
+                                    <h3>Sh. Bhupinder Singh</h3>
+                                    <p>Executive Member</p>
+                                    <address class="address"><i class="fas fa-globe"></i> Address</address>
+                                    <p><i class="fas fa-phone"></i><a href="tel:phone-number">Phone Number</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="d-flex justify-content-between">
-                            <ul class="pl-3">
-                                <li>
-                                    Dr Rahul Trehan
-                                </li>
-                            </ul>
-                            <p>Executive Member</p>
-                        </div>
-                    </div>
-                </div>
+                
+              
+                
             </div>
+            
+
             <div class="row pt-3">
                 <div class="col-md-4">
                     <div class="bg-primary text-white p-3 border border-dark mb-3">
