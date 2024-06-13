@@ -20,6 +20,13 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <style>
+
+.standard-size {
+    width: 100%;
+    height: 350px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
             .news-section {
                 background-color: #f8f9fa;
                 padding-top: 50px;
@@ -397,33 +404,44 @@
     </div>
 
 
-    <section class="admission pt-5">
-        <div class="row m-0 p-0">
-            <div class="col-12 col-lg-6 p-0">
-                <img src="/assets/apply.png" class="custom_img" alt="mask 2" loading="lazy">
-            </div>
 
-            <div class="col-12 col-lg-6 p-2 pl-4 position-relativ" style="background-color: #f8f9fa;">
-                <!-- <img src="/assets/Group 61.png" alt="yoga" class=" custom_img4" loading="lazy" /> -->
-                <h3 class="section-title text-left text-danger">Apply For Admission</h3>
-                <p class="intro-text text-left">
-                    "Join Us at Gandhi Memorial National College of Nursing.
-                    We provide a transformative experience that prepares you to excel in the dynamic field of nursing. 
-                    Here, you'll find a supportive environment where your passion for nursing can flourish."
-                </p>
-                <h4 class="features-title text-left text-danger">Unique Features</h4>
-                <ul class="features-list">
-                    <li> Highly Qualified, skilled and experienced faculty members.</li>
-                    <li> Smart classrooms with well-furnished and ventilated.</li>
-                    <li> Clinical training at Government & Private Hospitals.</li>
-                    <li> Special classes (NCLEX-RN, IELTS; CGFNS & Spoken English) for entry level competitive exams in India & Abroad.</li>
-                    <li> Training and placements assistance for Global Recruitments.</li>
-                    <li> Personality & Linguistic Development through ORELL TALK language Lab.</li>
-                    <li> Nominal fees for different courses.</li>
-                </ul>
+
+
+
+
+
+    <section class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 py-2">
+                    <img src="/assets/apply.png" class="custom_img" alt="mask 2" loading="lazy">
+                </div>
+                <div class="col-12 col-lg-6 p-2 pl-4 position-relativ" style="background-color: #f8f9fa;">
+                    <!-- <img src="/assets/Group 61.png" alt="yoga" class=" custom_img4" loading="lazy" /> -->
+                    <h3  class="section-title mb-3 text-left text-danger text-uppercase">Apply For Admission</h3>
+                    <p class="intro-text text-left mb-3">
+                        "Join Us at Gandhi Memorial National College of Nursing.
+                        We provide a transformative experience that prepares you to excel in the dynamic field of nursing. 
+                        Here, you'll find a supportive environment where your passion for nursing can flourish."
+                    </p>
+                    <h4 class="features-title text-left text-danger mb-3">Unique Features</h4>
+                    <ul class="features-list">
+                        <li> Highly Qualified, skilled and experienced faculty members.</li>
+                        <li> Smart classrooms with well-furnished and ventilated.</li>
+                        <li> Clinical training at Government & Private Hospitals.</li>
+                        <li> Special classes (NCLEX-RN, IELTS; CGFNS & Spoken English) for entry level competitive exams in India & Abroad.</li>
+                        <li> Training and placements assistance for Global Recruitments.</li>
+                        <li> Personality & Linguistic Development through ORELL TALK language Lab.</li>
+                        <li> Nominal fees for different courses.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+
 
 
 
@@ -435,7 +453,7 @@
                     <img src="/assets/Mask group (5).png" class="img-fluid" alt="about" loading="lazy">
                 </div>
                 <div class="col-12 col-lg-6 py-2">
-                    <h4 class="text-danger text-uppercase font-weight-bold">about us</h4>
+                    <h4 class="text-danger text-uppercase mb-3 font-weight-bold">about us</h4>
                     <p>G.M.N. College of Nursing Ambala Cantt Haryana is Established in the year 2024, Run by G.M.N.
                         College Trust & Management Society (Regd.) A premier college of nursing, aims to achieve
                         excellence in nursing education, practice, and research that meets national and
@@ -450,7 +468,7 @@
                         students to assume leadership roles in nursing clinical practice, administration, teaching,
                         and
                         research.</p>
-                    <a href="introduction.html" class="btn btn-danger">Read More</a>
+                    <a href="introduction.html" class="btn btn-danger mt-2">Read More</a>
                 </div>
             </div>
         </div>
@@ -552,45 +570,44 @@
     
     
     
-   <section class="news2">
-    <div class="container">
-        <div class="row" style="display: flex; align-items: stretch; justify-content: center;">
-            <div class="col-12 col-md-4 py-2 d-flex flex-column h-100">
-                <img src="/assets/President_resized.jpeg" alt="news"  class="bg-cover img-fluid" loading="lazy">
-                <div class="bg-custom p-3 h-100">
-                    <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">president's message</p>
-                    <div class="text-center mt-2" style="margin-top: 2px; line-height: 1; font-size: 14px;">
-                        I feel pleasure in extending you a very warm welcome on behalf of the Board...
+    <section class="news2">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: stretch; justify-content: center;">
+                <div class="col-12 col-md-4 py-2 d-flex flex-column">
+                    <img src="/assets/president-1.jpeg" alt="news" class="bg-cover img-fluid standard-size" loading="lazy">
+                    <div class="bg-custom p-3 h-100">
+                        <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">president's message</p>
+                        <div class="text-center mt-2" style="margin-top: 2px; line-height: 1; font-size: 14px;">
+                            I feel pleasure in extending you a very warm welcome on behalf of the Board...
+                        </div>
+                        <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
                     </div>
-                    <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
+                </div>
+    
+                <div class="col-12 col-md-4 py-2 d-flex flex-column">
+                    <img src="/assets/home3.jpg" alt="news" class="bg-cover img-fluid standard-size" loading="lazy">
+                    <div class="bg-custom p-3 h-100">
+                        <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">principal's message</p>
+                        <div class="text-center mt-2" style="margin-top: 5px; line-height: 1; font-size: 14px;">
+                            Education is the most powerful weapon which you can use to change the world...
+                        </div>
+                        <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-4 py-2 d-flex flex-column">
+                    <img src="/assets/generalsecretary.jpeg" alt="news" class="bg-cover img-fluid standard-size" loading="lazy">
+                    <div class="bg-custom p-3 h-100">
+                        <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">General secretary</p>
+                        <div class="text-center mt-2" style="margin-top: 5px; line-height: 1; font-size: 14px;">
+                            Education is the most powerful weapon which you can use to change the world...
+                        </div>
+                        <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-4 py-2 d-flex flex-column h-100">
-                <img src="/assets/Mask group (7).png" alt="news" class="bg-cover img-fluid" loading="lazy">
-                <div class="bg-custom p-3 h-100">
-                    <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">principal's message</p>
-                    <div class="text-center mt-2" style="margin-top: 5px; line-height: 1; font-size: 14px;">
-                        Education is the most powerful weapon which you can use to change the world...
-                    </div>
-                    <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 py-2 d-flex flex-column h-100">
-                <img src="/assets/generalsecretary.jpeg" alt="news" class="bg-cover img-fluid" style="height: 275px;" loading="lazy">
-                <div class="bg-custom p-3 h-100">
-                    <p class="text-capitalize m-0" style="font-size: 16px; font-weight: 500;">General secretary</p>
-                    <div class="text-center mt-2" style="margin-top: 5px; line-height: 1; font-size: 14px;">
-                        Education is the most powerful weapon which you can use to change the world...
-                    </div>
-                    <p class="m-0"><small><a href="governingBody.html" class="text-uppercase text-white">Read more</a></small></p>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
     
 
 
