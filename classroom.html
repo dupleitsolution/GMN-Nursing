@@ -18,6 +18,30 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .card {
+                border: none;
+                border-radius: 15px;
+            }
+        
+            .card-body {
+                padding: 2rem;
+            }
+        
+            .img-fluid {
+                border-radius: 15px;
+            }
+        
+            .text-muted {
+                color: #6c757d;
+                line-height: 1.6;
+            }
+        
+            .smaller-img {
+                width: 75%; /* Adjust the percentage to control the image size */
+                height: auto;
+            }
+        </style>
 
 </head>
 
@@ -327,26 +351,52 @@
     </div>
 
     <section class="text-center p-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-                    <div class="d-flex justify-content-center">
-                        <img src="/assets/classroom1.jpeg" class="img-fluid m-2" alt="about" loading="lazy" width="50%">
-                        <img src="/assets/classroom2.jpeg" class="img-fluid m-2" alt="about" loading="lazy" width="50%">
-                        <img src="/assets/classroom3.jpeg" class="img-fluid m-2" alt="about" loading="lazy" width="50%">
+        <div class="container py-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-center">
+                                <img src="/assets/classroom1.jpeg" class="img-fluid rounded smaller-img" alt="about" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <p class="text-muted">The college classrooms are designed to provide a conducive environment for learning and skill development. They are spacious, well-lit, and properly ventilated to ensure comfort during study sessions. Each classroom is equipped with essential teaching aids such as whiteboards and LCD projectors to facilitate interactive learning experiences.</p>
+                            <p class="text-muted">In addition, the classrooms are arranged to comfortably accommodate up to 60 students, ensuring their comfort and convenience. This setup enables students to concentrate on their studies without any distractions. Overall, the classrooms in the nursing college are thoughtfully designed to promote effective learning, collaboration, and skill development among students pursuing a career in nursing.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <div>
-
-                The college classrooms are designed to provide a conducive environment for learning and skill development. They are spacious, well-lit, and properly ventilated to ensure comfort during study sessions. Each classroom is equipped with essential teaching aids such as whiteboards, LCD projector to facilitate interactive learning experiences.
-                In addition, the classrooms are arranged to comfortably accommodate up to 60 students, ensuring their comfort and convenience. This setup enables students to concentrate on their studies without any distractions.  Overall, the classrooms in the nursing college are thoughtfully designed to promote effective learning, collaboration, and skill development among students pursuing a career in nursing.
-                The college features a modern digital classroom alongside traditional ones. This digital setup allows students to access online resources and engage with course materials interactively.This combination of traditional and digital environments ensures a comprehensive and engaging education for all students.
-
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-center">
+                                <img src="/assets/classroom2.jpeg" class="img-fluid rounded smaller-img" alt="about" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-center">
+                                <img src="/assets/classroom3.jpeg" class="img-fluid rounded smaller-img" alt="about" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-           
         </div>
+        
+      
+        
+        
+        
     </section>
     
     
