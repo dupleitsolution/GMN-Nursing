@@ -531,7 +531,7 @@
                         students to assume leadership roles in nursing clinical practice, administration, teaching,
                         and
                         research.</p>
-                    <a href="introduction.html" class="btn btn-danger mt-2">Read More</a>
+                    <a href="introduction.html" class="btn btn-danger mt-2 " style="position: relative; z-index: 10;">Read More</a>
                     
                 </div>
             </div>
@@ -676,7 +676,7 @@
 
 
     <div class="feedback pt-5">
-        <div id="carouselExampleIndicators" class="carouse slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -1063,19 +1063,19 @@
                         <h4 class="text-capitalize pt-1 mb-1">admission form</h4>
                         <h6 class="text-danger">2024-2025</h6>
                     </div>
-                    <form>
+                    <form onsubmit="sendEmail(event)">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="email" placeholder="Email Address">
+                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
                         </div>
     
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">+91</div>
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone Number">
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone Number" required>
                         </div>
     
                         <div class="row">
@@ -1090,18 +1090,12 @@
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 py-1">
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" class="form-control" required>
                                     <option selected>Course</option>
                                     <option>GMN</option>
                                     <option>BSC</option>
                                 </select>
                             </div>
-                            <!-- <div class="col-12 col-md-6 py-1">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Specialization</option>
-                                    <option>...</option>
-                                </select>
-                            </div> -->
                             <div class="col-12 py-1">
                                 <div class="form-group">
                                     <div class="form-check">
@@ -1135,6 +1129,64 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+     
+        <script>
+            function sendEmail(event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('inlineFormInputGroup').value;
+                const state = document.getElementById('state').value;
+                const city = document.getElementById('city').value;
+                const course = document.getElementById('inputState').value;
+                const agree = document.getElementById('gridCheck').checked ? 'Yes' : 'No';
+    
+                Email.send({
+                    SecureToken: "your-secure-token", // Replace with your secure token from SMTP.js
+                    To: email,
+                    From: "your-email@example.com",
+                    Subject: "New Admission Form Submission",
+                    Body: `
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Phone:</strong> ${phone}</p>
+                        <p><strong>State:</strong> ${state}</p>
+                        <p><strong>City:</strong> ${city}</p>
+                        <p><strong>Course:</strong> ${course}</p>
+                        <p><strong>Agree to receive information:</strong> ${agree}</p>
+                    `
+                }).then(
+                    message => alert("Mail sent successfully")
+                );
+            }
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                const states = [
+                    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgar", "Goa",
+                    "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala",
+                    "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland",
+                    "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura",
+                    "Uttar Pradesh", "Uttarakhand", "West Bengal"
+                ];
+                const stateSelect = document.getElementById('state');
+    
+                states.forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+            });
+    
+            function populateCities() {
+                // Populate the city dropdown based on the selected state
+                // You can add city options dynamically here
+            }
+        </script>
+
+        
     <script>
         $(document).ready(function () {
             $("#menu").click(function () {
