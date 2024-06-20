@@ -41,6 +41,22 @@
     cursor: pointer;
            }
 
+
+        
+            .card {
+                border: none;
+                border-radius: 15px;
+            }
+        
+            .card-body {
+                padding: 2rem;
+            }
+            .smaller-img {
+                width: 70%; /* Adjust the percentage to control the image size */
+                height: auto;
+                padding: 1rem; /* Adds padding around the image */
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+            }
           </style>
 </head>
 
@@ -326,7 +342,7 @@
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
                                             <li class="contact menu-item ">
-                                                <a href="#">Contact</a>
+                                                <a href="contact.html">Contact</a>
                                             </li>
                                             <li class="line"></li>
                                         </ul>
@@ -351,11 +367,15 @@
 
     <section class="text-center p-4">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-start align-items-start">
                 <div class="col-12 col-lg-8">
-                    <div class="d-flex justify-content-center">
-                        <img src="/assets/celebration.png" class="img-fluid m-2" alt="about" loading="lazy" width="50%">
-                       
+                   
+                    <div class="card shadow-sm">
+                        <div class="card-body p-">
+                            <div class="d-flex justify-content-start">
+                                <img src="/assets/celebration.png" class="img-fluid rounded smaller-img p-" alt="about" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

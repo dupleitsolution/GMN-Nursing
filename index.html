@@ -89,6 +89,70 @@
              }
         </style>
 
+
+<script>
+    // Sample data for states and cities
+    const stateCityData = {
+        "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
+        "Arunachal Pradesh": ["Itanagar"],
+        "Assam": ["Guwahati", "Dibrugarh"],
+        "Bihar": ["Patna", "Gaya"],
+        "Chhattisgarh": ["Raipur", "Bilaspur"],
+        "Goa": ["Panaji", "Margao"],
+        "Gujarat": ["Ahmedabad", "Surat", "Vadodara"],
+        "Haryana": ["Chandigarh", "Gurgaon"],
+        "Himachal Pradesh": ["Shimla", "Manali"],
+        "Jharkhand": ["Ranchi", "Jamshedpur"],
+        "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru"],
+        "Kerala": ["Thiruvananthapuram", "Kochi"],
+        "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior"],
+        "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+        "Manipur": ["Imphal"],
+        "Meghalaya": ["Shillong"],
+        "Mizoram": ["Aizawl"],
+        "Nagaland": ["Kohima"],
+        "Odisha": ["Bhubaneswar", "Cuttack"],
+        "Punjab": ["Chandigarh", "Amritsar"],
+        "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur"],
+        "Sikkim": ["Gangtok"],
+        "Tamil Nadu": ["Chennai", "Coimbatore"],
+        "Telangana": ["Hyderabad", "Warangal"],
+        "Tripura": ["Agartala"],
+        "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
+        "Uttarakhand": ["Dehradun", "Nainital"],
+        "West Bengal": ["Kolkata", "Darjeeling"]
+    };
+
+    function populateStates() {
+        const stateSelect = document.getElementById('state');
+        stateSelect.innerHTML = '<option selected>Select State*</option>';
+        for (const state in stateCityData) {
+            const option = document.createElement('option');
+            option.value = state;
+            option.text = state;
+            stateSelect.appendChild(option);
+        }
+    }
+
+    function populateCities() {
+        const citySelect = document.getElementById('city');
+        const stateSelect = document.getElementById('state');
+        const selectedState = stateSelect.value;
+
+        citySelect.innerHTML = '<option selected>Select City</option>';
+        if (selectedState && stateCityData[selectedState]) {
+            stateCityData[selectedState].forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.text = city;
+                citySelect.appendChild(option);
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', populateStates);
+</script>
+
 </head>
 
 <body>
@@ -376,7 +440,7 @@
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
                                             <li class="contact menu-item ">
-                                                <a href="#">Contact</a>
+                                                <a href="contact.html">Contact</a>
                                             </li>
                                             <li class="line"></li>
                                         </ul>
@@ -468,6 +532,7 @@
                         and
                         research.</p>
                     <a href="introduction.html" class="btn btn-danger mt-2">Read More</a>
+                    
                 </div>
             </div>
         </div>
@@ -611,7 +676,7 @@
 
 
     <div class="feedback pt-5">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carouse slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -892,7 +957,7 @@
                 </div>
             </div>
             <div class="text-center pt-5">
-                <a href="#" class="btn btn-danger rounded-0">View All</a>
+                <a href="gallery.html" class="btn btn-danger rounded-0">View All</a>
             </div>
         </div>
     </section>
@@ -941,7 +1006,7 @@
                         <!-- <p class="text-white ml-3"><a href="#" class="text-white">About Us</a></p> -->
                         <p class="text-white ml-3"><a href="admission_form.html" class="text-white">Admission</a></p>
                         <p class="text-white ml-3"><a href="gallery.html" class="text-white">Gallery</a></p>
-                        <p class="text-white ml-3"><a href="#" class="text-white">Contact</a></p>
+                        <p class="text-white ml-3"><a href="contact.html" class="text-white">Contact</a></p>
                         <!-- <p class="text-white ml-3"><a href="#" class="text-white">Faculty</a></p> -->
                     </div>
                     <!-- <div class="col-6">
@@ -995,7 +1060,8 @@
                 <div class="modal-body p-3">
                     <div class="text-center">
                         <img src="/assets/logo6.png" width="50" alt="logo">
-                        <h4 class="text-capitalize pt-1 mb-3">admission form</h4>
+                        <h4 class="text-capitalize pt-1 mb-1">admission form</h4>
+                        <h6 class="text-danger">2024-2025</h6>
                     </div>
                     <form>
                         <div class="form-group">
@@ -1014,29 +1080,28 @@
     
                         <div class="row">
                             <div class="col-12 col-md-6 py-1">
-                                <select id="inputState" class="form-control">
+                                <select id="state" class="form-control" onchange="populateCities()" required>
                                     <option selected>Select State*</option>
-                                    <option>...</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 py-1">
-                                <select id="inputState" class="form-control">
+                                <select id="city" class="form-control" required>
                                     <option selected>Select City</option>
-                                    <option>...</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 py-1">
                                 <select id="inputState" class="form-control">
                                     <option selected>Course</option>
-                                    <option>...</option>
+                                    <option>GMN</option>
+                                    <option>BSC</option>
                                 </select>
                             </div>
-                            <div class="col-12 col-md-6 py-1">
+                            <!-- <div class="col-12 col-md-6 py-1">
                                 <select id="inputState" class="form-control">
                                     <option selected>Specialization</option>
                                     <option>...</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="col-12 py-1">
                                 <div class="form-group">
                                     <div class="form-check">
