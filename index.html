@@ -9,6 +9,15 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <!--custom style-->
     <link rel="stylesheet" href="main.css">
+      
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "M_1Gwbd7MgAaxkWw8"
+            });
+        })();
+    </script>
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -20,7 +29,9 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <style>
+ 
 
+ 
 .standard-size {
     width: 100%;
     height: 350px; /* Set a fixed height */
@@ -119,7 +130,8 @@
         "Telangana": ["Hyderabad", "Warangal"],
         "Tripura": ["Agartala"],
         "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
-        "Uttarakhand": ["Dehradun", "Nainital"],
+        "Uttarakhand": ["Dehradun", "Nainital","Dehradun"
+],
         "West Bengal": ["Kolkata", "Darjeeling"]
     };
 
@@ -132,6 +144,8 @@
             option.text = state;
             stateSelect.appendChild(option);
         }
+
+    
     }
 
     function populateCities() {
@@ -152,6 +166,10 @@
 
     document.addEventListener('DOMContentLoaded', populateStates);
 </script>
+
+
+
+
 
 </head>
 
@@ -1063,7 +1081,7 @@
                         <h4 class="text-capitalize pt-1 mb-1">admission form</h4>
                         <h6 class="text-danger">2024-2025</h6>
                     </div>
-                    <form onsubmit="sendEmail(event)">
+                    <form id="myForm">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
                         </div>
@@ -1075,7 +1093,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">+91</div>
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone Number" required>
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" required>
                         </div>
     
                         <div class="row">
@@ -1085,15 +1103,15 @@
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 py-1">
-                                <select id="city" class="form-control" required>
+                                <select id="city" class="form-control" onchange="populateStates()" required>
                                     <option selected>Select City</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 py-1">
-                                <select id="inputState" class="form-control" required>
-                                    <option selected>Course</option>
-                                    <option>GMN</option>
-                                    <option>BSC</option>
+                                <select id="course" class="form-control" required>
+                                    <option selected disabled>Courses</option>
+                                    <option>G.N.M (General Nursing and Midwifery)</option>
+                                    <option>B.Sc (Nursing)</option>
                                 </select>
                             </div>
                             <div class="col-12 py-1">
@@ -1108,13 +1126,59 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-danger mt-2">Apply Now</button>
+                            <button type="submit"  class="btn btn-danger mt-2">Apply Now</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const serviceID = "service_vq1t2d8";
+            const templateID = "template_2xoqtbh";
+     
+    
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+        
+            const course = document.getElementById('course').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+    
+            var params = {
+               name: name,
+               phone: phone,
+               email: email,
+            
+               course: course,
+               city: city,
+               state: state
+                     };
+
+             console.log(params)
+            emailjs.send(serviceID,templateID,params, "M_1Gwbd7MgAaxkWw8")
+                .then(res => {
+                    // document.getElementById("name").value = "";
+                    // document.getElementById("email").value = "";
+                    // document.getElementById("phone").value = "";
+                    // document.getElementById("subject").value = "";
+                    // document.getElementById("message").value = "";
+                  const msg =  document.getElementById("feedbackMessage")
+                  msg.style.display = 'block'
+                    console.log(res);
+         
+                })
+                .catch(err => console.log(err));
+        });
+    </script>
+    
     
 
     <!-- Optional JavaScript -->
@@ -1130,6 +1194,10 @@
         crossorigin="anonymous"></script>
 
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+       
+        
+
+    
      
         <!-- <script>
             function sendEmail(event) {
@@ -1188,6 +1256,11 @@
 
         
     <script>
+
+
+
+
+
         $(document).ready(function () {
             $("#menu").click(function () {
                 $(".navigation").toggle();
