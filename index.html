@@ -1258,7 +1258,7 @@
 
 
             // const form = document.getElementById('myForm');
-
+                require('dotenv').config();
                 const name = document.getElementById('name').value;
                 const phone = document.getElementById('phone').value;
                 const email = document.getElementById('email').value;
@@ -1267,7 +1267,7 @@
                 const state = document.getElementById('state').value;
 
                 const apiUrl = 'https://api.brevo.com/v3/smtp/email';
-                const host = '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';
+                const host = process.env.API_BRAVO;
 
                 const applicantDetails = {
                     fullName: name,
