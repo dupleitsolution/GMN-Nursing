@@ -1205,54 +1205,138 @@
         </div>
     </div>
 
-
+<script src="config.js" ></script>
     <script>
         
         const form = document.getElementById('myForm');
         form.addEventListener('submit', function (event) {
             event.preventDefault();
     
-            const serviceID = "service_vq1t2d8";
-            const templateID = "template_2xoqtbh";
+            // const serviceID = "service_vq1t2d8";
+            // const templateID = "template_2xoqtbh";
      
     
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
+            // const name = document.getElementById('name').value;
+            // const phone = document.getElementById('phone').value;
+            // const email = document.getElementById('email').value;
         
-            const course = document.getElementById('course').value;
-            const city = document.getElementById('city').value;
-            const state = document.getElementById('state').value;
-    
-            var params = {
-               name: name,
-               phone: phone,
-               email: email,
+            // const course = document.getElementById('course').value;
+            // const city = document.getElementById('city').value;
+            // const state = document.getElementById('state').value;
+
             
-               course: course,
-               city: city,
-               state: state
-                     };
+    
+            // var params = {
+            //    name: name,
+            //    phone: phone,
+            //    email: email,
+            
+            //    course: course,
+            //    city: city,
+            //    state: state
+            //          };
 
-             console.log(params)
-            emailjs.send(serviceID,templateID,params, "M_1Gwbd7MgAaxkWw8")
-                .then(res => {
-                    // document.getElementById("name").value = "";
-                    // document.getElementById("email").value = "";
-                    // document.getElementById("phone").value = "";
-                    // document.getElementById("subject").value = "";
-                    // document.getElementById("message").value = "";
-                //   const msg =  document.getElementById("feedbackMessage")
-                //   msg.style.display = 'block'
-                //     console.log(res);
+            //  console.log(params)
+            // emailjs.send(serviceID,templateID,params, "M_1Gwbd7MgAaxkWw8")
+            //     .then(res => {
+            //         // document.getElementById("name").value = "";
+            //         // document.getElementById("email").value = "";
+            //         // document.getElementById("phone").value = "";
+            //         // document.getElementById("subject").value = "";
+            //         // document.getElementById("message").value = "";
+            //     //   const msg =  document.getElementById("feedbackMessage")
+            //     //   msg.style.display = 'block'
+            //     //     console.log(res);
                 
-                document.getElementById('exampleModal').style.display='none'
+            //     document.getElementById('exampleModal').style.display='none'
 
 
-                document.getElementById('id01').style.display='block'
+            //     document.getElementById('id01').style.display='block'
          
+            //     })
+            //     .catch(err => console.log(err));
+
+
+            // const form = document.getElementById('myForm');
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const course = document.getElementById('course').value;
+                const city = document.getElementById('city').value;
+                const state = document.getElementById('state').value;
+
+                const apiUrl = 'https://api.brevo.com/v3/smtp/email';
+                const apiKey = window.env.API_BRAVO;
+
+                const applicantDetails = {
+                    fullName: name,
+                    email: email,
+                    phone: phone,
+                    state: state,
+                    city: city,
+                    desiredCourse: course,
+                };
+
+                const data = {
+                    sender: {
+                        name: 'GMN COLLEGE OF NURSING',
+                        email: 'gmncnursing@yopmail.com'
+                    },
+                    to: [
+                        {
+                            email: email,
+                            name: name
+                        }
+                    ],
+                    subject: 'New Student Admission Application Received',
+                    htmlContent:`
+<pre>
+Dear Admission Office,
+
+We have received a new admission form submission from our website. Please find the details of the applicant below:
+
+---
+Applicant Details:
+- Full Name: ${name}
+- Email: ${email}
+- Phone Number: ${phone}
+- State: ${state}
+- City: ${city}
+- Course: ${course}
+
+Please review the attached form and process it accordingly.
+
+Cheers,
+GMN COLLEGE OF NURSING
+</pre>`
+
+              
+                };
+
+                console.log('data', data);
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'api-key': apiKey
+                    },
+                    body: JSON.stringify(data)
                 })
-                .catch(err => console.log(err));
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Email sent successfully:', data);
+                    alert('Form submitted successfully!');
+                    // document.getElementById('exampleModal').style.display='none'
+                    var closeButton = document.querySelector('#exampleModal .close');
+    closeButton.click();
+
+                })
+                .catch(error => {
+                    console.error('Error sending email:', error);
+                    alert('Error submitting form. Please try again later.');
+                });
         });
     </script>
     
