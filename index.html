@@ -100,8 +100,8 @@
              }
         </style>
 
-
-<script>
+<script src="country.js" ></script>
+<!-- <script>
     const apiKey = "YOUR_API_KEY"; // Replace with your actual API key
 
     // Function to fetch states
@@ -207,7 +207,7 @@
         alert("Form submitted successfully!");
         // You can add your form submission logic here (e.g., send data to server)
     });
-</script>
+</script> -->
 
 
 
@@ -1140,7 +1140,7 @@
             
                         <div class="row">
                             <div class="col-12 col-md-6 py-1">
-                                <select id="state" class="form-control" onchange="populateCities()" required>
+                                <select id="state" class="form-control"  onchange="print_city('city', this.selectedIndex);"required>
                                     <option selected>Select State*</option>
                                 </select>
                             </div>
