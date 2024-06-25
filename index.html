@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>GANDHI MEMORIAL NATIONAL COLLEGE OF NURSING </title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <!--custom style-->
@@ -1176,8 +1177,37 @@
         </div>
     </div>
 
+    <!--feedbackMessage-->
+    <div class="modal " tabindex="-1" role="dialog" id="id01">
+        <div class="modal-dialog" role="document" style="    height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" onclick=" 
+              document.getElementsByClassName('modal-backdrop')[0].style.display='none';
+                document.getElementById('id01').style.display='none';
+                        " aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-3">
+                    <div class="text-center">
+                        <img src="/assets/success.svg" width="120" alt="logo">
+                        <h5 class="text-capitalize pt-1 mb-1 mt-2">Thank you</h5>
+                    </div>
+                    
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
+        
         const form = document.getElementById('myForm');
         form.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -1212,9 +1242,14 @@
                     // document.getElementById("phone").value = "";
                     // document.getElementById("subject").value = "";
                     // document.getElementById("message").value = "";
-                  const msg =  document.getElementById("feedbackMessage")
-                  msg.style.display = 'block'
-                    console.log(res);
+                //   const msg =  document.getElementById("feedbackMessage")
+                //   msg.style.display = 'block'
+                //     console.log(res);
+                
+                document.getElementById('exampleModal').style.display='none'
+
+
+                document.getElementById('id01').style.display='block'
          
                 })
                 .catch(err => console.log(err));
